@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KC2LZ96V06"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KC2LZ96V06');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Join us for the Jal Ceremony of Krina & Jay — Tuesday, 15 December 2026, 5:00 PM, 67 Alden Square, Ajax, ON L1T 4Z1.">
 <meta property="og:type" content="website">
@@ -301,7 +309,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
       if (live && f < 600) requestAnimationFrame(frame); else c.remove();
     })();
   }
-  const open = () => { const r = $('open').getBoundingClientRect(); shower(r.left + r.width / 2, r.top + r.height / 2); document.body.classList.add('opened'); setTimeout(() => $('cover') && $('cover').remove(), 1600); };
+  const open = () => { try { gtag('event', 'open_invite'); } catch (e) {} const r = $('open').getBoundingClientRect(); shower(r.left + r.width / 2, r.top + r.height / 2); document.body.classList.add('opened'); setTimeout(() => $('cover') && $('cover').remove(), 1600); };
   $('open').addEventListener('click', open);
 
   // olive sprigs: a curved stem with leaves along it, plus gold buds
